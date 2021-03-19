@@ -19,9 +19,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     let myRefreshControl = UIRefreshControl()
     var isMoreDataLoading = false
     var loadingMoreView:InfiniteScrollActivityView?
-
-//    let cellBuffer: CGFloat = 2
-//    let cellHeight: CGFloat = 445
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +40,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         var insets = tableView.contentInset
         insets.bottom += InfiniteScrollActivityView.defaultHeight
         tableView.contentInset = insets
-    
-       
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +47,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.loadCells()
     }
     
+    // load initial cells
     @objc func loadCells() {
         numberOfCells = 5
         let query = PFQuery(className:"Posts")
@@ -69,10 +64,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("unable to get posts")
             }
         }
-        print("loading cells")
-        print(posts.count)
     }
     
+    // load additional cells upon scolling down
     func loadMoreCells() {
         numberOfCells = numberOfCells + 5
         let query = PFQuery(className:"Posts")
@@ -94,11 +88,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("error loading more cells")
             }
         }
-        print("loading more cells")
-        print(posts.count)
     }
     
-//    https://guides.codepath.org/ios/Table-View-Guide#adding-pull-to-refresh
+    // https://guides.codepath.org/ios/Table-View-Guide
+    // infinite scrolling
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (!isMoreDataLoading) {
             // Calculate the position of one screen length before the bottom of the results
@@ -124,9 +117,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
-        print("indexPath.row")
-        print(indexPath.row)
+
         let post = posts[indexPath.row]
         
         let user = post["author"] as! PFUser
@@ -154,7 +147,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 }
 
-//https://guides.codepath.org/ios/Table-View-Guide#adding-pull-to-refresh
+// https://guides.codepath.org/ios/Table-View-Guide
+// class used for infinite scrolling
 class InfiniteScrollActivityView: UIView {
     var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
     static let defaultHeight:CGFloat = 60.0

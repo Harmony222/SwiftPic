@@ -140,43 +140,43 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="445" id="mT0-4L-oa7" customClass="PostCell" customModule="SwiftPic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="445"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="429" id="mT0-4L-oa7" customClass="PostCell" customModule="SwiftPic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="429"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mT0-4L-oa7" id="5A7-AO-Usb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="429"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-NC-ggZ">
-                                                    <rect key="frame" x="8" y="8" width="398" height="421"/>
+                                                    <rect key="frame" x="12" y="14" width="390" height="375"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Q56-NC-ggZ" secondAttribute="height" multiplier="359:382" id="E3q-cm-wtw"/>
+                                                        <constraint firstAttribute="width" secondItem="Q56-NC-ggZ" secondAttribute="height" multiplier="26:25" id="wVW-fA-5mq"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harmony" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEj-IN-Iap">
-                                                    <rect key="frame" x="8" y="437" width="70" height="0.0"/>
+                                                    <rect key="frame" x="10" y="397" width="70" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="I love this photo!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZT-Vb-fEU">
-                                                    <rect key="frame" x="86" y="437" width="320" height="0.0"/>
+                                                    <rect key="frame" x="88" y="397" width="316" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Q56-NC-ggZ" secondAttribute="trailing" constant="8" id="4Lr-YE-h3D"/>
-                                                <constraint firstAttribute="trailing" secondItem="OZT-Vb-fEU" secondAttribute="trailing" constant="8" id="FKp-WW-ScY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q56-NC-ggZ" secondAttribute="trailing" constant="12" id="4Lr-YE-h3D"/>
+                                                <constraint firstAttribute="trailing" secondItem="OZT-Vb-fEU" secondAttribute="trailing" constant="10" id="FKp-WW-ScY"/>
                                                 <constraint firstItem="OZT-Vb-fEU" firstAttribute="leading" secondItem="dEj-IN-Iap" secondAttribute="trailing" constant="8" id="Io7-G0-nib"/>
                                                 <constraint firstItem="dEj-IN-Iap" firstAttribute="top" secondItem="Q56-NC-ggZ" secondAttribute="bottom" constant="8" id="Kpi-z0-8c4"/>
                                                 <constraint firstItem="OZT-Vb-fEU" firstAttribute="top" secondItem="Q56-NC-ggZ" secondAttribute="bottom" constant="8" id="faF-Cv-XzG"/>
-                                                <constraint firstItem="Q56-NC-ggZ" firstAttribute="leading" secondItem="5A7-AO-Usb" secondAttribute="leading" constant="8" id="g0y-Ke-rv1"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OZT-Vb-fEU" secondAttribute="bottom" constant="8" id="gCa-Rf-cXS"/>
-                                                <constraint firstItem="Q56-NC-ggZ" firstAttribute="top" secondItem="5A7-AO-Usb" secondAttribute="top" constant="8" id="hdx-Je-pZO"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dEj-IN-Iap" secondAttribute="bottom" constant="8" id="kDH-zB-V1N"/>
-                                                <constraint firstItem="dEj-IN-Iap" firstAttribute="leading" secondItem="5A7-AO-Usb" secondAttribute="leading" constant="8" id="z3b-1o-r0u"/>
+                                                <constraint firstItem="Q56-NC-ggZ" firstAttribute="leading" secondItem="5A7-AO-Usb" secondAttribute="leading" constant="12" id="g0y-Ke-rv1"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OZT-Vb-fEU" secondAttribute="bottom" constant="12" id="gCa-Rf-cXS"/>
+                                                <constraint firstItem="Q56-NC-ggZ" firstAttribute="top" secondItem="5A7-AO-Usb" secondAttribute="top" constant="14" id="hdx-Je-pZO"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dEj-IN-Iap" secondAttribute="bottom" constant="12" id="kDH-zB-V1N"/>
+                                                <constraint firstItem="dEj-IN-Iap" firstAttribute="leading" secondItem="5A7-AO-Usb" secondAttribute="leading" constant="10" id="z3b-1o-r0u"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCp-cI-4Lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="-97.536945812807886"/>
+            <point key="canvasLocation" x="1707.2463768115942" y="-97.826086956521749"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="DVD-da-XrB">
