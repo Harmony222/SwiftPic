@@ -188,11 +188,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
-
             
             let user = post["author"] as! PFUser
             cell.usernameLabel.text = user.username
             
+            let profileImageFile = (user["image"] as? PFFileObject) ?? nil
+            if profileImageFile != nil {
+                let urlString = profileImageFile!.url!
+                let url = URL(string: urlString)!
+                cell.profileImageView.af.setImage(withURL: url)
+
+            } else {
+                cell.profileImageView.image = UIImage(named: "profile_tab")
+            }
+           
             cell.captionLabel.text = post["caption"] as? String
             
             let imageFile = post["image"] as! PFFileObject
@@ -210,9 +219,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.commentLabel.text = comment["text"] as? String
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
+            
+            let profileImageFile = (user["image"] as? PFFileObject) ?? nil
+            if profileImageFile != nil {
+                let urlString = profileImageFile!.url!
+                let url = URL(string: urlString)!
+                cell.profileImageView.af.setImage(withURL: url)
+            } else {
+                cell.profileImageView.image = UIImage(named: "profile_tab")
+            }
+                        
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell") as! AddCommentCell
+            let user = PFUser.current()!
+            
+            let imageFile = user["image"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.profileImageView.af.setImage(withURL: url)
             return cell
         }
     }

@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // Add user persistance across app restarts
     func login() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "FeedNavigationController")
+        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "TabBarNavigationController")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

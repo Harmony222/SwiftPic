@@ -18,6 +18,9 @@
 		FF5F2C8B26039C0300709ADB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F2C8A26039C0300709ADB /* FeedViewController.swift */; };
 		FF5F2C8E2603A56400709ADB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F2C8D2603A56400709ADB /* CameraViewController.swift */; };
 		FF5F2C982603ADD200709ADB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F2C972603ADD200709ADB /* PostCell.swift */; };
+		FF8DB568260A7EC800B8698A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8DB567260A7EC800B8698A /* ProfileViewController.swift */; };
+		FF8DB56B260A8C0A00B8698A /* SetProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8DB56A260A8C0A00B8698A /* SetProfileImageViewController.swift */; };
+		FF8DB573260A908300B8698A /* AddCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8DB572260A908300B8698A /* AddCommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		FF5F2C8A26039C0300709ADB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FF5F2C8D2603A56400709ADB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FF5F2C972603ADD200709ADB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		FF8DB567260A7EC800B8698A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FF8DB56A260A8C0A00B8698A /* SetProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProfileImageViewController.swift; sourceTree = "<group>"; };
+		FF8DB572260A908300B8698A /* AddCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 				FF5F2C8D2603A56400709ADB /* CameraViewController.swift */,
 				FF5F2C972603ADD200709ADB /* PostCell.swift */,
 				FF55E47B260A548C0089CD01 /* CommentCell.swift */,
+				FF8DB567260A7EC800B8698A /* ProfileViewController.swift */,
+				FF8DB56A260A8C0A00B8698A /* SetProfileImageViewController.swift */,
+				FF8DB572260A908300B8698A /* AddCommentCell.swift */,
 			);
 			path = SwiftPic;
 			sourceTree = "<group>";
@@ -218,11 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5F2C8826039BA700709ADB /* LoginViewController.swift in Sources */,
+				FF8DB56B260A8C0A00B8698A /* SetProfileImageViewController.swift in Sources */,
 				FF5F2C8E2603A56400709ADB /* CameraViewController.swift in Sources */,
 				FF5F2C6C260398E600709ADB /* AppDelegate.swift in Sources */,
 				FF5F2C8B26039C0300709ADB /* FeedViewController.swift in Sources */,
+				FF8DB573260A908300B8698A /* AddCommentCell.swift in Sources */,
 				FF5F2C6E260398E600709ADB /* SceneDelegate.swift in Sources */,
 				FF5F2C982603ADD200709ADB /* PostCell.swift in Sources */,
+				FF8DB568260A7EC800B8698A /* ProfileViewController.swift in Sources */,
 				FF55E47C260A548C0089CD01 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
