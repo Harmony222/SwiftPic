@@ -8,5 +8,6 @@ target 'SwiftPic' do
   # Pods for SwiftPic
   pod 'Parse'
   pod 'AlamofireImage'
+  pod 'MessageInputBar'
 
 end

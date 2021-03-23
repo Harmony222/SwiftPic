@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +17,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
+        // Add event listener for when user logs out
+        
+        
+        
+        if PFUser.current() != nil {
+            login()
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    // Add user persistance across app restarts
+    func login() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "FeedNavigationController")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

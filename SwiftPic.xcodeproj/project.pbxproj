@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8715690FA3022EE575B94DB7 /* Pods_SwiftPic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B634D8DD751B5175D20B18F /* Pods_SwiftPic.framework */; };
+		FF55E47C260A548C0089CD01 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E47B260A548C0089CD01 /* CommentCell.swift */; };
 		FF5F2C6C260398E600709ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F2C6B260398E600709ADB /* AppDelegate.swift */; };
 		FF5F2C6E260398E600709ADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F2C6D260398E600709ADB /* SceneDelegate.swift */; };
 		FF5F2C73260398E600709ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5F2C71260398E600709ADB /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		02CC4FE554091B95223FAAE5 /* Pods-SwiftPic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPic.release.xcconfig"; path = "Target Support Files/Pods-SwiftPic/Pods-SwiftPic.release.xcconfig"; sourceTree = "<group>"; };
 		9B634D8DD751B5175D20B18F /* Pods_SwiftPic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93862C95980AE3E49B02A55 /* Pods-SwiftPic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPic.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPic/Pods-SwiftPic.debug.xcconfig"; sourceTree = "<group>"; };
+		FF55E47B260A548C0089CD01 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		FF5F2C68260398E600709ADB /* SwiftPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5F2C6B260398E600709ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5F2C6D260398E600709ADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				FF5F2C8A26039C0300709ADB /* FeedViewController.swift */,
 				FF5F2C8D2603A56400709ADB /* CameraViewController.swift */,
 				FF5F2C972603ADD200709ADB /* PostCell.swift */,
+				FF55E47B260A548C0089CD01 /* CommentCell.swift */,
 			);
 			path = SwiftPic;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				FF5F2C8B26039C0300709ADB /* FeedViewController.swift in Sources */,
 				FF5F2C6E260398E600709ADB /* SceneDelegate.swift in Sources */,
 				FF5F2C982603ADD200709ADB /* PostCell.swift in Sources */,
+				FF55E47C260A548C0089CD01 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
