@@ -192,6 +192,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let user = post["author"] as! PFUser
             cell.usernameLabel.text = user.username
             
+            
             let profileImageFile = (user["image"] as? PFFileObject) ?? nil
             if profileImageFile != nil {
                 let urlString = profileImageFile!.url!
@@ -199,16 +200,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.profileImageView.af.setImage(withURL: url)
 
             } else {
-                cell.profileImageView.image = UIImage(named: "profile_tab")
+                cell.profileImageView.image = UIImage(named: "user")
             }
-           
+            cell.profileImageView.layer.masksToBounds = true
+            let radius = cell.profileImageView.frame.height/2
+            cell.profileImageView.layer.cornerRadius = radius
+            
+            // set caption associated with image
             cell.captionLabel.text = post["caption"] as? String
             
+            // set post cell main image
             let imageFile = post["image"] as! PFFileObject
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
-            
             cell.photoView.af.setImage(withURL: url)
+            
             return cell
             
         } else if indexPath.row <= comments.count {
@@ -226,23 +232,33 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let url = URL(string: urlString)!
                 cell.profileImageView.af.setImage(withURL: url)
             } else {
-                cell.profileImageView.image = UIImage(named: "profile_tab")
+                cell.profileImageView.image = UIImage(named: "user")
             }
+            cell.profileImageView.layer.masksToBounds = true
+            let radius = cell.profileImageView.frame.height/2
+            cell.profileImageView.layer.cornerRadius = radius
                         
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell") as! AddCommentCell
             let user = PFUser.current()!
             
-            let imageFile = user["image"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
+            let imageFile = (user["image"] as? PFFileObject) ?? nil
+            if imageFile != nil {
+                let urlString = imageFile!.url!
+                let url = URL(string: urlString)!
+                cell.profileImageView.af.setImage(withURL: url)
+            } else {
+                cell.profileImageView.image = UIImage(named: "user")
+            }
+            cell.profileImageView.layer.masksToBounds = true
+            let radius = cell.profileImageView.frame.height/2
+            cell.profileImageView.layer.cornerRadius = radius
             
-            cell.profileImageView.af.setImage(withURL: url)
             return cell
         }
     }
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
@@ -255,7 +271,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             selectedPost = post
         }
-
     }
 
     /*
